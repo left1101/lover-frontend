@@ -12,7 +12,7 @@ export default {
   name: "App",
   metaInfo: {
     title: "最爱你",
-    titleTemplate: "%s | 至我的爱人",
+    titleTemplate: "%s | 致我的爱人",
     link: [
       { rel: "favicon", href: faviconIco },
       { rel: "apple-touch-icon", href: faviconPng, sizes: "57x57" },
