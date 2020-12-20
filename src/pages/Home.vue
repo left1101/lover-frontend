@@ -35,16 +35,26 @@ export default {
     };
   },
   data() {
+    const day = moment();
+    const time2 = moment([2020, 8, 6]);
+    const time1 = moment([day.year(), day.month(), day.date()]);
+    console.log(day.year(), day.month(), day.date(), time1);
+
     return {
       boy: "谢喜儒",
       girl: "吴飞双",
-      time: "2020-09-06 20:00:00"
+      // time: "2020-09-06 20:00:00"
+      time: moment([2020, 9, 6]),
+      days: time1.diff(time2, "days")
     };
   },
   computed: {
-    days: function() {
-      return moment(new Date()).diff(moment(new Date(this.time)), "days");
-    },
+    // days: function() {
+    //   const day = moment();
+    //   const time = moment([day.year, day.month, day.day]);
+    //   console.log(day.year, day.month, day.day, time);
+    //   return time.diff(this.time, "days");
+    // },
     title: function() {
       return "在一起的第" + this.days + "天";
     }
